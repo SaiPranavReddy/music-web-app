@@ -1,0 +1,11 @@
+node{
+    stage("git checkout"){
+        git "https://github.com/SaiPranavReddy/music-web-app.git"
+    }   
+    stage("mvn-clean"){
+        sh "mvn clean"
+    }
+    stage("mvn-package"){
+        sh "mvn package"
+    }
+}
